@@ -43,29 +43,32 @@
             </div>
 
             <div class="text-right">
-                <div class="text-sm text-gray-500 dark:text-gray-400 flex">
-                    {% if is_granted('ROLE_ADMIN_WATCH') %}
-                    <div class="mr-2">
-                        <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_admin') }}">Manage Dashboard</a>
-                    </div>
-                    {% endif %}
+                <div class="text-sm text-gray-500 dark:text-gray-400 flex items-center">
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <div>
-                        <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_micro_post_add') }}">Add New</a>
-                    </div>
-                    <div class="ml-2">
-                        <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_settings_profile') }}">Profile Settings</a>
-                    </div>
-                    <div class="ml-2">
-                        <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_logout') }}">Logout</a>
-                    </div>
+                        <div>
+                            <a href="{{ path('app_profile',{ id:app.user.id }) }}">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</a>
+                        </div>
+                    {% if is_granted('ROLE_ADMIN_WATCH') %}
+                        <div class="ml-2">
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_admin') }}">Manage Dashboard</a>
+                        </div>
+                    {% endif %}
+                        <div class="ml-2">
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_micro_post_add') }}">Add New</a>
+                        </div>
+                        <div class="ml-2">
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_settings_profile') }}">Profile Settings</a>
+                        </div>
+                        <div class="ml-2">
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_logout') }}">Logout</a>
+                        </div>
                     {% else %}
-                    <div>
-                        <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_login') }}">Login</a>
-                    </div>
-                    <div class="ml-2">
-                        <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_register') }}">Register</a>
-                    </div>
+                        <div>
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_login') }}">Login</a>
+                        </div>
+                        <div class="ml-2">
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_register') }}">Register</a>
+                        </div>
                     {% endif %}
                 </div>
             </div>

@@ -2,9 +2,11 @@
     <div class="bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 rounded py-3 px-4">
         <div class="mt-2 flex items-center">
             {{ include('shared/_avatar.html.twig',{profile: user.userProfile, size: 32})}}
-            <div class="ml-16 text-2xl">
-                {{ include('follower/_follow_button.html.twig', {userToFollow: user}) }}
-            </div>
+            {% if app.user.id != user.id %}
+                <div class="ml-16 text-2xl">
+                    {{ include('follower/_follow_button.html.twig', {userToFollow: user}) }}
+                </div>
+            {% endif %}
         </div>
         <div class="text-2xl">{{ user.userProfile.name ?? user.email }}</div>
         <div class="text-lg text-gray-500 dark:text-gray-400 font-normal">{{ user.email }}</div>

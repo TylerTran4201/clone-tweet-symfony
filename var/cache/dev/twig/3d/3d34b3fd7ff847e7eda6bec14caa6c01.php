@@ -118,69 +118,78 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
         echo "            </div>
 
             <div class=\"text-right\">
-                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex\">
+                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex items-center\">
                     ";
         // line 47
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN_WATCH")) {
-            // line 48
-            echo "                    <div class=\"mr-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 49
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin");
-            echo "\">Manage Dashboard</a>
-                    </div>
-                    ";
-        }
-        // line 52
-        echo "                    ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 53
-            echo "                    <div>
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 54
+            // line 48
+            echo "                        <div>
+                            <a href=\"";
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_profile", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "user", [], "any", false, false, false, 49), "id", [], "any", false, false, false, 49)]), "html", null, true);
+            echo "\">";
+            echo twig_include($this->env, $context, "shared/_avatar.html.twig", ["profile" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "user", [], "any", false, false, false, 49), "userProfile", [], "any", false, false, false, 49), "size" => 9]);
+            echo "</a>
+                        </div>
+                    ";
+            // line 51
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN_WATCH")) {
+                // line 52
+                echo "                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
+                // line 53
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin");
+                echo "\">Manage Dashboard</a>
+                        </div>
+                    ";
+            }
+            // line 56
+            echo "                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
+            // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_micro_post_add");
             echo "\">Add New</a>
-                    </div>
-                    <div class=\"ml-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 57
+                        </div>
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
+            // line 60
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_settings_profile");
             echo "\">Profile Settings</a>
-                    </div>
-                    <div class=\"ml-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 60
+                        </div>
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
+            // line 63
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
-                    </div>
+                        </div>
                     ";
         } else {
-            // line 63
-            echo "                    <div>
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 64
+            // line 66
+            echo "                        <div>
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
+            // line 67
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Login</a>
-                    </div>
-                    <div class=\"ml-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 67
+                        </div>
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
+            // line 70
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">Register</a>
-                    </div>
+                        </div>
                     ";
         }
-        // line 70
+        // line 73
         echo "                </div>
             </div>
         </div>
         <div class=\"w-full md:w-2/3 mx-auto\">
         ";
-        // line 74
+        // line 77
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 74));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 77, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 77));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 75
+            // line 78
             echo "            <div class=\"rounded-md p-2 border-green-300 bg-green-50 border dark:border-green-600 dark:bg-green-700 dark:text-white mb-4\">";
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "</div>
@@ -189,18 +198,18 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 77
+        // line 80
         echo "
         ";
-        // line 78
+        // line 81
         $this->displayBlock('body', $context, $blocks);
-        // line 80
+        // line 83
         echo "        </div>
     </body>
     ";
-        // line 82
+        // line 85
         $this->displayBlock('show', $context, $blocks);
-        // line 84
+        // line 87
         echo "</html>
 ";
         
@@ -296,7 +305,7 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
 
     }
 
-    // line 78
+    // line 81
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -306,7 +315,7 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 79
+        // line 82
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -316,7 +325,7 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
 
     }
 
-    // line 82
+    // line 85
     public function block_show($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -326,7 +335,7 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "show"));
 
-        // line 83
+        // line 86
         echo "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -348,7 +357,7 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
 
     public function getDebugInfo()
     {
-        return array (  330 => 83,  320 => 82,  310 => 79,  300 => 78,  290 => 42,  280 => 41,  267 => 21,  257 => 20,  244 => 18,  234 => 17,  215 => 14,  204 => 84,  202 => 82,  198 => 80,  196 => 78,  193 => 77,  184 => 75,  180 => 74,  174 => 70,  168 => 67,  162 => 64,  159 => 63,  153 => 60,  147 => 57,  141 => 54,  138 => 53,  135 => 52,  129 => 49,  126 => 48,  124 => 47,  118 => 43,  115 => 41,  111 => 39,  109 => 38,  102 => 34,  89 => 23,  86 => 20,  83 => 17,  78 => 14,  73 => 11,  69 => 10,  66 => 9,  62 => 7,  57 => 4,  54 => 3,  52 => 2,  49 => 1,);
+        return array (  339 => 86,  329 => 85,  319 => 82,  309 => 81,  299 => 42,  289 => 41,  276 => 21,  266 => 20,  253 => 18,  243 => 17,  224 => 14,  213 => 87,  211 => 85,  207 => 83,  205 => 81,  202 => 80,  193 => 78,  189 => 77,  183 => 73,  177 => 70,  171 => 67,  168 => 66,  162 => 63,  156 => 60,  150 => 57,  147 => 56,  141 => 53,  138 => 52,  136 => 51,  129 => 49,  126 => 48,  124 => 47,  118 => 43,  115 => 41,  111 => 39,  109 => 38,  102 => 34,  89 => 23,  86 => 20,  83 => 17,  78 => 14,  73 => 11,  69 => 10,  66 => 9,  62 => 7,  57 => 4,  54 => 3,  52 => 2,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -398,29 +407,32 @@ class __TwigTemplate_09040df093e21a241b39bd4b0c7da893 extends Template
             </div>
 
             <div class=\"text-right\">
-                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex\">
-                    {% if is_granted('ROLE_ADMIN_WATCH') %}
-                    <div class=\"mr-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_admin') }}\">Manage Dashboard</a>
-                    </div>
-                    {% endif %}
+                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex items-center\">
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <div>
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_micro_post_add') }}\">Add New</a>
-                    </div>
-                    <div class=\"ml-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_settings_profile') }}\">Profile Settings</a>
-                    </div>
-                    <div class=\"ml-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_logout') }}\">Logout</a>
-                    </div>
+                        <div>
+                            <a href=\"{{ path('app_profile',{ id:app.user.id }) }}\">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</a>
+                        </div>
+                    {% if is_granted('ROLE_ADMIN_WATCH') %}
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_admin') }}\">Manage Dashboard</a>
+                        </div>
+                    {% endif %}
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_micro_post_add') }}\">Add New</a>
+                        </div>
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_settings_profile') }}\">Profile Settings</a>
+                        </div>
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_logout') }}\">Logout</a>
+                        </div>
                     {% else %}
-                    <div>
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_login') }}\">Login</a>
-                    </div>
-                    <div class=\"ml-2\">
-                        <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_register') }}\">Register</a>
-                    </div>
+                        <div>
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_login') }}\">Login</a>
+                        </div>
+                        <div class=\"ml-2\">
+                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_register') }}\">Register</a>
+                        </div>
                     {% endif %}
                 </div>
             </div>
