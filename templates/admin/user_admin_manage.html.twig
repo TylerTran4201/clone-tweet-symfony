@@ -1,0 +1,87 @@
+{% extends 'admin/admin_base.html.twig' %}
+
+{% block title %}Quản Lý Bài Viết{% endblock %}
+
+{% block bread %}
+Quản Lý Admin
+{% endblock %}
+
+{% block body %}
+{{ include('admin/_manage_tabs.html.twig') }}
+{{ include('admin/_user_manage_tabs.html.twig') }}
+
+<div class="flex flex-col">
+
+<!-- The button to open modal -->
+<a href="#AddAdmin" class="btn max-w-min bg-green-700 border-0 hover:bg-green-900">
+    <span class="material-symbols-outlined">
+        person_add
+    </span>Add
+</a>
+
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-center text-sm font-light bg-gray-200 bg-opacity-80">
+          <thead
+            class="border-b bg-neutral-800 font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+            <tr>
+              <th scope="col" class=" px-6 py-4">#</th>
+              <th scope="col" class=" px-6 py-4">Email</th>
+              <th scope="col" class=" px-6 py-4">Quyền</th>
+              <th scope="col" class=" px-6 py-4">Hoạt Động</th>
+            </tr>
+          </thead>
+          <tbody class="">
+          {% for user in users %}
+            <tr class="font-normal border-b dark:border-neutral-500 text-gray-900 {% if user.isBanned() %} bg-red-100 dark:bg-red-200 {% elseif user.isVerified() == false %} dark:bg-yellow-700 {% endif %} ">
+                <td class="whitespace-nowrap  px-6 py-4 font-medium">{{ user.id }}</td>
+                <td class="whitespace-nowrap  px-6 py-4">{{ user.email }}</td>
+                <td class="whitespace-nowrap  px-6 py-4"><a href="{{ path('app_set_role_admin',{id: user.id})}}" class="hover:underline hover:text-indigo-500"><span class="material-symbols-outlined inline-block align-middle">
+                                                             edit
+                                                             </span>Phân quyền</a></td>
+                <td class="whitespace-nowrap  px-6 py-4">
+                {% if user.isBanned() %}
+                    <a class="hover:underline" href=" {{ path('app_user_unlock',{id: user.id}) }} " > Đã khóa đến ({{user.bannedUntil | date("j M, Y")}})</a>
+                    {% else %}
+                    <a class="hover:underline" href="{{ path('app_user_lock',{id:user.id}) }}"> Hoạt Động</a>
+                {% endif %}
+                </td>
+            </tr>
+          {% endfor %}
+  
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal #}
+<div class="modal" id="AddAdmin">
+  <div class="modal-box bg-white shadow rounded">
+{{ form_start(form) }}
+    <div class="">
+        <div>
+            {{ form_label(form.email, 'Username (email)', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800'}}) }}
+            {{ form_widget(form.email, {'attr': {'class': 'bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}})}}
+            {{ form_errors(form.email) }} 
+        </div>
+        <div>
+            {{ form_label(form.password, 'Password', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800'}}) }}
+            {{ form_widget(form.password, {'attr': {'class': 'bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}})}}
+            {{ form_errors(form.password) }}
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            <button type="submit"
+                    class="block w-full shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-md border p-2 mt-4 mb-2">
+                    Add
+            </button>
+             <a href="#" class="block w-full bg-transparent hover:bg-indigo-500 text-indigo-700 hover:text-white border border-indigo-500 hover:border-transparent rounded p-2 mt-4 mb-2 text-center"> Hủy</a>
+        </div>
+    </div>
+{{ form_end(form) }}
+  </div>
+</div>
+{% endblock %}

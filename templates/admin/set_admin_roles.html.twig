@@ -1,0 +1,23 @@
+{% extends 'admin/admin_base.html.twig' %}
+{% block bread %}
+<a href="{{ path('app_user_admin_manage') }}">Admins</a> <span class="material-symbols-outlined"> arrow_forward </span> Phân Quyền {{user.email}}
+{% endblock %}
+{% block body %}
+
+<div class="w-3/5 m-auto bg-white shadow-2xl bg-opacity-80 dark:bg-gray-700 dark:bg-opacity-80 rounded p-4 grid justify-items-center">
+    {{ form_start(form) }}
+        {{ form_label(form.roles) }}
+        {% for choice in form.roles %}
+           <div>
+            {{ form_widget(choice) }}
+            {{ form_label(choice) }}
+           </div>
+        {% endfor %}
+        <button type="submit"
+                class="block w-full shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-md border p-2 mt-4 mb-2">
+                Save
+        </button>
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

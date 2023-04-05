@@ -1,0 +1,62 @@
+{% extends 'admin/admin_base.html.twig' %}
+
+{% block title %}Quản Lý Bài Viết{% endblock %}
+
+{% block bread %}
+Quản Lý Bài Viết
+{% endblock %}
+
+{% block body %}
+{{ include('admin/_manage_tabs.html.twig') }}
+
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-center text-sm font-light bg-gray-200 bg-opacity-80">
+          <thead
+            class="border-b bg-neutral-800 font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+            <tr>
+              <th scope="col" class=" px-6 py-4">#</th>
+              <th scope="col" class=" px-6 py-4">Tiêu Đề</th>
+              <th scope="col" class=" px-6 py-4">Tài Khoản</th>
+              <th scope="col" class=" px-6 py-4">Ngày Tạo</th>
+              <th scope="col" class=" px-6 py-4">Giới Hạn</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for post in posts %}
+            <tr class="font-normal border-b dark:border-neutral-500 text-gray-900">
+                <td class="whitespace-nowrap px-6 py-4 font-medium">{{ post.id }}</td>
+                <td class="whitespace-nowrap px-6 py-4 font-medium text-indigo-500 underline">
+                    <a href="{{ path('app_micro_post_show',{post: post.id}) }}">{{post.title}}</a>
+                </td>
+                <td class="whitespace-nowrap px-6 py-4 font-medium">
+                   {% if post.author.userProfile != null %}
+                        {% if post.author.userProfile.name != null %}
+                            {{post.author.userProfile.name}}
+                        {% else %}
+                            {{ post.author.email }}
+                        {% endif %}
+                    {% else %}
+                            {{ post.author.email }}
+                   {% endif %}
+                </td>
+                <td class="whitespace-nowrap px-6 py-4 font-medium">{{ post.created | date("j M, Y") }}</td>
+                <td class="whitespace-nowrap px-6 py-4 font-medium">
+                    {% if post.isExtraPrivacy() %}
+                        Có
+                        {% else %}
+                        Không
+                    {% endif %}
+                        
+                </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

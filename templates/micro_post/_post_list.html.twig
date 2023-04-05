@@ -1,0 +1,9 @@
+<div class="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-1 gap-4 justify-items-center">
+    {% if posts|length > 0 %}
+        {% for post in posts%}
+            {{ include('micro_Post/_post.html.twig',{post: post}) }}
+        {% endfor %}
+    {% else %}
+        <b  class="text-gray-100">Chưa có gì bài tin.</b>
+    {% endif %}
+</div>

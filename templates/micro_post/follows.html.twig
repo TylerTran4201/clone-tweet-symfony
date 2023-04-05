@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bài Viết Người Theo Dõi{% endblock %}
+
+{% block bread %}
+Những Bài Viết Mà Bạn Theo Dõi
+{% endblock %}
+
+{% block body %}
+{{ include('micro_post/_post_tabs.html.twig') }}
+{{ include('micro_post/_post_list.html.twig') }}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% embed 'shared/_tabs.html.twig' %}
+    {% block tabs %}
+        {% embed 'shared/_tab.html.twig' with { route: 'app_statistical_manage' } %}
+            {% block content %}
+                Thống Kê
+            {% endblock %}
+            {% block path %}
+                {{ path('app_statistical_manage') }}
+            {% endblock %}
+        {% endembed %}
+
+        {% embed 'shared/_tab.html.twig' with { route: 'app_user_manage' , classes:"ml-2"} %}
+            {% block content %}
+                Quản Lý Người Dùng
+            {% endblock %}
+            {% block path %}
+                {{ path('app_user_manage') }}
+            {% endblock %}
+        {% endembed %}
+
+        {% embed 'shared/_tab.html.twig' with { route: 'app_post_manage', classes:"ml-2"} %}
+            {% block content %}
+                Quản Lý Bài Viết
+            {% endblock %}
+            {% block path %}
+                {{ path('app_post_manage') }}              
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+{% endembed %}

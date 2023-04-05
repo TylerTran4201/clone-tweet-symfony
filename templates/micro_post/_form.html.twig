@@ -1,0 +1,29 @@
+<div class="p-4 bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 rounded">
+  {{ form_start(form) }}
+        <div>{{ form_errors(form) }}</div>
+
+        <div>
+            {{ form_label(form.title,'Vui lòng nhập tiêu đề',{'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
+            {{ form_widget(form.title, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}})}}
+            {{ form_errors(form.title) }}
+        </div>
+
+        <div>
+            {{ form_label(form.text, 'Vui lòng nhập nội dung bài viết', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
+            {{ form_widget(form.text, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
+            {{ form_errors(form.text) }}
+        </div>
+
+        <div class="flex items-center mt-4">
+            {{ form_widget(form.extraPrivacy, {'attr': {'class': 'h-4 w-4 rounded border-gray border text-indigo-300 mr-2'}}) }}
+            {{ form_label(form.extraPrivacy, 'Tôi muốn thêm quyền riêng tư',{'label_attr': {'class': 'text-sm text-gray-700 dark:text-gray-300 font-medium'}}) }}
+        </div>
+        <div class="text-gray-400 darK:text-gray-500 mb-4 text-sm">
+            Bài viết này chỉ thấy bởi những người mà bạn đã theo dõi
+        </div>
+
+        <div class="grid justify-items-center">
+            <button type="submit" class="text-base font-medium rounded-md py-1 px-4 text-gray-100 bg-indigo-500 hover:bg-indigo-600">Save!</button>
+        </div>
+    {{ form_end(form) }}
+</div>

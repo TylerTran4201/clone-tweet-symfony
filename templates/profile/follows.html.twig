@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tài Khoản Người Dùng -> Đang Theo Dõi{% endblock %}
+
+{% block bread %}
+Tài Khoản Người Dùng <span class="material-symbols-outlined"> arrow_forward </span> Đang Theo Dõi
+{% endblock %}
+
+{% block body %}
+{{ include('profile/_profile_header.html.twig') }}
+{{ include('profile/_profile_tabs.html.twig') }}
+{{ include('follower/_follower_list.html.twig', {users: user.follows}) }}
+{% endblock %}

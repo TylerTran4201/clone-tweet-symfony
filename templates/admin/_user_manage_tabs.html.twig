@@ -1,0 +1,32 @@
+{% embed 'shared/_tabs.html.twig' %}
+    {% block tabs %}
+        {% embed 'shared/_tab.html.twig' with { route: 'app_user_manage' } %}
+            {% block content %}
+                Tài Khoản
+            {% endblock %}
+            {% block path %}
+                {{ path('app_user_manage') }}
+            {% endblock %}
+        {% endembed %}
+
+        {% if is_granted('ROLE_ADMIN') %}
+            {% embed 'shared/_tab.html.twig' with { route: 'app_user_admin_manage' , classes:"ml-2"} %}
+                {% block content %}
+                    Admin
+                {% endblock %}
+                {% block path %}
+                    {{ path('app_user_admin_manage') }}
+                {% endblock %}
+            {% endembed %}
+        {% endif %}
+
+        {% embed 'shared/_tab.html.twig' with { route: 'app_user_profile_manage' , classes:"ml-2"} %}
+            {% block content %}
+                Thông Tin
+            {% endblock %}
+            {% block path %}
+                {{ path('app_user_profile_manage') }}
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+{% endembed %}

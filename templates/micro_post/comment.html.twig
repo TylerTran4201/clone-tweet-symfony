@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bình Luận - Thêm Bình Luận {% endblock %}
+
+{% block bread %}
+<a href="{{path('app_micro_post_show',{post:post.id})}}">Bài Viết</a> <span class="material-symbols-outlined"> arrow_forward </span> Bình Luận
+{% endblock %}
+
+{% block body %}
+    <div class="grid justify-items-center">
+        {{ include('micro_Post/_post.html.twig', { post:post }) }}
+    </div>
+
+    <div class="bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 rounded p-5">
+        {{ form_start(form) }}
+        <div>{{ form_errors(form) }}</div>
+
+        <div>
+            {{ form_label(form.text, 'Please enter the comment', {'label_attr': {'class': 'block text-sm text-gray-700 dark:text-gray-300 font-medium'}}) }}
+            {{ form_widget(form.text, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 dark:text-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full h-auto pl-3 mt-2'}}) }}
+            {{ form_errors(form.text) }}
+        </div>
+        <div class="grid justify-items-center">
+            <button type="submit"
+                    class="block shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-500 text-white rounded-md border p-2 mt-4 mb-2">Add Comment!</button>
+        </div>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}

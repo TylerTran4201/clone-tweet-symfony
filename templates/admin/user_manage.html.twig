@@ -1,0 +1,80 @@
+{% extends 'admin/admin_base.html.twig' %}
+
+{% block title %}Quản Lý Bài Viết{% endblock %}
+
+{% block bread %}
+Quản Lý Người Dùng
+{% endblock %}
+
+{% block body %}
+{{ include('admin/_manage_tabs.html.twig') }}
+{{ include('admin/_user_manage_tabs.html.twig') }}
+
+<div class="flex flex-col">
+{% set user_click = 'hello' %}
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-center text-sm font-light bg-gray-200 bg-opacity-80">
+          <thead
+            class="border-b bg-neutral-800 font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+            <tr>
+              <th scope="col" class=" px-6 py-4">#</th>
+              <th scope="col" class=" px-6 py-4">Email</th>
+              <th scope="col" class=" px-6 py-4">Tình Trạng Xác Minh</th>
+              <th scope="col" class=" px-6 py-4">Hoạt Động</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for user in users %}
+            <tr class="font-normal border-b dark:border-neutral-500 text-gray-900 {% if user.isBanned() %} bg-red-100 dark:bg-red-200 {% elseif user.isVerified() == false %} dark:bg-amber-400 {% endif %} ">
+                <td class="whitespace-nowrap  px-6 py-4 font-medium">{{ user.id }}</td>
+                <td class="whitespace-nowrap  px-6 py-4">{{ user.email }}</td>
+                <td class="whitespace-nowrap  px-6 py-4">
+                {% if user.isVerified() %}
+                    <span class="text-green-500 font-bold material-symbols-outlined"> task_alt </span>
+                    {% else %} 
+                    <span class="text-red-500 font-bold material-symbols-outlined"> cancel </span>
+                {% endif %}</td>
+                <td class="whitespace-nowrap  px-6 py-4">
+                {% if user.isBanned() %}
+                    <a class="hover:underline" href=" {{ path('app_user_unlock',{id: user.id}) }} " > Đã khóa đến ({{user.bannedUntil | date("j M, Y")}})</a>
+                    {% else %}
+                    <a class="hover:underline" href="{{ path('app_user_lock',{id:user.id}) }}"> Hoạt Động</a>
+                {% endif %}
+                </td>
+            </tr>
+          {% endfor %}
+  
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{# lock #}
+<div class="modal" id="lock-modal">
+  <div class="modal-box text-gray-100">
+    <h3 class="font-bold text-lg">Thông Báo</h3>
+    <p class="py-4">Xác nhận khóa tài khoản</p>
+    <div class="modal-action flex justify-between">
+        <label for="my-modal" class="btn bg-red-500"><a class="text-gray-100" href="#">Khóa</a></label>
+        <label for="my-modal" class="btn"><a href="#">Hủy Bỏ</a></label>
+    </div>
+  </div>
+</div>
+
+  
+
+{# unlock #}
+<div class="modal" id="lock-modal">
+  <div class="modal-box text-gray-100">
+    <h3 class="font-bold text-lg">Thông Báo</h3>
+    <p class="py-4">Xác nhận mở tài khoản</p>
+    <div class="modal-action flex justify-between">
+        <label for="my-modal" class="btn bg-green-500"><a class="text-gray-100" href="#">Mở Khóa</a></label>
+        <label for="my-modal" class="btn"><a href="#">Hủy Bỏ</a></label>
+    </div>
+  </div>
+</div>
+{% endblock %}

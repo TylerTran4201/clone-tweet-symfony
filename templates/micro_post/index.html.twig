@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tất cả bài viết{% endblock %}
+
+{% block body %}
+{% if is_granted('ROLE_COMMENTER') == false and is_granted('IS_AUTHENTICATED_FULLY')%}
+<div class="rounded-md p-2 border-green-300 bg-green-50 border dark:border-green-600 dark:bg-green-700 dark:text-white mb-4">Cần Xác Minh Email Để Được Bình Luận Bài Viết</div>
+{% endif %}
+
+{{ include('micro_post/_post_tabs.html.twig') }}
+{{ include('micro_post/_post_list.html.twig') }}
+{% endblock %}
