@@ -2,6 +2,9 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     globals:
         profiles: '%profiles%'
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+
     
 when@test:
     twig:

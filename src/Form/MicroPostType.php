@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\MicroPost;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -14,9 +15,12 @@ class MicroPostType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('text', TextareaType::class)
+            ->add('text', CKEditorType::class, array(
+                'config' => array(
+                    'uiColor' => '#e5e7eb',
+                )
+            ))
             ->add('extraPrivacy');
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

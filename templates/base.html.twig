@@ -45,9 +45,6 @@
             <div class="text-right">
                 <div class="text-sm text-gray-500 dark:text-gray-400 flex items-center">
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <div>
-                            <a href="{{ path('app_profile',{ id:app.user.id }) }}">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</a>
-                        </div>
                     {% if is_granted('ROLE_ADMIN_WATCH') %}
                         <div class="ml-2">
                             <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_admin') }}">Manage Dashboard</a>
@@ -56,6 +53,16 @@
                         <div class="ml-2">
                             <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_micro_post_add') }}">Add New</a>
                         </div>
+
+                        {# dropdown #}
+                        <div class="ml-2 dropdown dropdown-end">
+                            <label tabindex="0">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</label>
+                            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a>Item 1</a></li>
+                                <li><a>Item 2</a></li>
+                            </ul>
+                        </div>
+
                         <div class="ml-2">
                             <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_settings_profile') }}">Profile Settings</a>
                         </div>

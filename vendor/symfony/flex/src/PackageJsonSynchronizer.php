@@ -13,7 +13,6 @@ namespace Symfony\Flex;
 
 use Composer\Json\JsonFile;
 use Composer\Json\JsonManipulator;
-use Composer\Semver\VersionParser;
 use Seld\JsonLint\ParsingException;
 
 /**
@@ -24,13 +23,11 @@ class PackageJsonSynchronizer
 {
     private $rootDir;
     private $vendorDir;
-    private $versionParser;
 
     public function __construct(string $rootDir, string $vendorDir = 'vendor')
     {
         $this->rootDir = $rootDir;
         $this->vendorDir = $vendorDir;
-        $this->versionParser = new VersionParser();
     }
 
     public function shouldSynchronize(): bool
@@ -139,10 +136,8 @@ class PackageJsonSynchronizer
                 $content['devDependencies'][$dependency] = $constraint;
                 $didChangePackageJson = true;
             } elseif ($constraint !== $content[$parentNode][$dependency]) {
-                if ($this->shouldUpdateConstraint($content[$parentNode][$dependency], $constraint)) {
-                    $content[$parentNode][$dependency] = $constraint;
-                    $didChangePackageJson = true;
-                }
+                $content[$parentNode][$dependency] = $constraint;
+                $didChangePackageJson = true;
             }
         }
 
@@ -166,18 +161,6 @@ class PackageJsonSynchronizer
         }
 
         return $didChangePackageJson;
-    }
-
-    private function shouldUpdateConstraint(string $existingConstraint, string $constraint)
-    {
-        try {
-            $existingConstraint = $this->versionParser->parseConstraints($existingConstraint);
-            $constraint = $this->versionParser->parseConstraints($constraint);
-
-            return !$existingConstraint->matches($constraint);
-        } catch (\UnexpectedValueException $e) {
-            return true;
-        }
     }
 
     private function registerWebpackResources(array $phpPackages)
