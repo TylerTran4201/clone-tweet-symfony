@@ -44,7 +44,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
         echo "
 ";
         // line 2
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), "name", [], "any", false, false, false, 2), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), "name", [], "any", false, false, false, 2), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 dark:text-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
 
 ";
@@ -53,7 +53,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
         echo "
 ";
         // line 5
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 5, $this->source); })()), "bio", [], "any", false, false, false, 5), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 5, $this->source); })()), "bio", [], "any", false, false, false, 5), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 dark:text-gray-200  border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
 
 <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
@@ -64,7 +64,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
         echo "
         ";
         // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "twitterUsername", [], "any", false, false, false, 10), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "twitterUsername", [], "any", false, false, false, 10), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:text-gray-200  dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
     </div>
 
@@ -75,7 +75,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
         echo "
         ";
         // line 15
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "websiteUrl", [], "any", false, false, false, 15), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "websiteUrl", [], "any", false, false, false, 15), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
     </div>
 </div>
@@ -88,7 +88,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
         echo "
         ";
         // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "company", [], "any", false, false, false, 22), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "company", [], "any", false, false, false, 22), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "  
     </div>
 
@@ -99,7 +99,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
         echo "
         ";
         // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), "location", [], "any", false, false, false, 27), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), "location", [], "any", false, false, false, 27), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
     </div>
 </div>
@@ -109,7 +109,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
         echo "
 ";
         // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), "dateOfBirth", [], "any", false, false, false, 31), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), "dateOfBirth", [], "any", false, false, false, 31), 'widget', ["attr" => ["class" => "bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
 ";
         
@@ -138,36 +138,36 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
     public function getSourceContext()
     {
         return new Source("{{ form_label(form.name, 'Tên của bạn', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
-{{ form_widget(form.name, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
+{{ form_widget(form.name, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 dark:text-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
 
 {{ form_label(form.bio, 'Bio', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
-{{ form_widget(form.bio, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
+{{ form_widget(form.bio, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 dark:text-gray-200  border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
 
 <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
     <div>
         {{ form_label(form.twitterUsername, 'Twitter username', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
-        {{ form_widget(form.twitterUsername, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
+        {{ form_widget(form.twitterUsername, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:text-gray-200  dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
     </div>
 
     <div>
         {{ form_label(form.websiteUrl, 'Website URL', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
-        {{ form_widget(form.websiteUrl, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
+        {{ form_widget(form.websiteUrl, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
     </div>
 </div>
 
 <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
     <div>
         {{ form_label(form.company, 'Công ty', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
-        {{ form_widget(form.company, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}  
+        {{ form_widget(form.company, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}  
     </div>
 
     <div>
         {{ form_label(form.location, 'Địa chỉ', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
-        {{ form_widget(form.location, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
+        {{ form_widget(form.location, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
     </div>
 </div>
 {{ form_label(form.dateOfBirth, 'Ngày sinh', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
-{{ form_widget(form.dateOfBirth, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:bg-gray-500 dark:bg-opacity-40 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
+{{ form_widget(form.dateOfBirth, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
 ", "settings_profile/_profile_form.html.twig", "E:\\clone-tweet\\templates\\settings_profile\\_profile_form.html.twig");
     }
 }
