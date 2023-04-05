@@ -5052,7 +5052,7 @@
         <argument key="users" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.pb4hGBm" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.4zvndl5" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::statistical" type="service_closure" id=".service_locator.WS.x59_"/>
@@ -5077,6 +5077,7 @@
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.YU8H6ve"/>
         <argument key="App\Controller\SettingsProfileController::profile" type="service_closure" id=".service_locator.Nhkyqt4"/>
         <argument key="App\Controller\SettingsProfileController::profileImage" type="service_closure" id=".service_locator.ngC_2cH"/>
+        <argument key="App\Controller\SettingsProfileController::theme" type="service_closure" id=".service_locator.Nhkyqt4"/>
         <argument key="App\Controller\UserManageController::lockAccount" type="service_closure" id=".service_locator.dOokbUc"/>
         <argument key="App\Controller\UserManageController::setAdminRole" type="service_closure" id=".service_locator.dOokbUc"/>
         <argument key="App\Controller\UserManageController::unlockAccount" type="service_closure" id=".service_locator.dOokbUc"/>
@@ -5109,6 +5110,7 @@
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.YU8H6ve"/>
         <argument key="App\Controller\SettingsProfileController:profile" type="service_closure" id=".service_locator.Nhkyqt4"/>
         <argument key="App\Controller\SettingsProfileController:profileImage" type="service_closure" id=".service_locator.ngC_2cH"/>
+        <argument key="App\Controller\SettingsProfileController:theme" type="service_closure" id=".service_locator.Nhkyqt4"/>
         <argument key="App\Controller\UserManageController:lockAccount" type="service_closure" id=".service_locator.dOokbUc"/>
         <argument key="App\Controller\UserManageController:setAdminRole" type="service_closure" id=".service_locator.dOokbUc"/>
         <argument key="App\Controller\UserManageController:unlockAccount" type="service_closure" id=".service_locator.dOokbUc"/>
@@ -5505,12 +5507,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.pb4hGBm"/>
+      <argument type="service" id=".service_locator.4zvndl5"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.pb4hGBm"/>
+      <argument type="service" id=".service_locator.4zvndl5"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -6289,7 +6291,7 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.pb4hGBm"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.4zvndl5"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -6302,7 +6304,7 @@
     <service id=".service_locator.Xqjp7BL" alias=".service_locator.VVCoPw4"/>
     <service id=".service_locator.riGN6sa" alias=".service_locator.YU8H6ve"/>
     <service id=".service_locator.9ihagKl" alias=".service_locator.QCLB1hM"/>
-    <service id=".service_locator.HVRPS2f" alias=".service_locator.pb4hGBm"/>
+    <service id=".service_locator.I6ko.7k" alias=".service_locator.4zvndl5"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.SoPoY0J" alias=".service_locator.Vb2fs.o"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>

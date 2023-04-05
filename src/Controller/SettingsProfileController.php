@@ -54,7 +54,7 @@ class SettingsProfileController extends AbstractController
             ]
         );
     }
-
+    
     #[Route('/settings/profile-image', name: 'app_settings_profile_image')]
     #[IsGranted('IS_AUTHENTICATED_FULLY')]
     public function profileImage(
@@ -105,4 +105,18 @@ class SettingsProfileController extends AbstractController
             ]
         );
     }
+    #[Route('/settings/theme', name: 'app_settings_theme')]
+    public function theme(UserRepository $users ,Request $request){
+        /** @var User $currentUser  */
+        $currentUser = $this->getUser();
+        if($currentUser->getTheme() == "dark")
+            $currentUser->setTheme("");
+        else
+            $currentUser->setTheme("dark");
+        
+        $users->save($currentUser,true);
+
+        return $this->redirect($request->headers->get('referer'));
+    }
+    
 }

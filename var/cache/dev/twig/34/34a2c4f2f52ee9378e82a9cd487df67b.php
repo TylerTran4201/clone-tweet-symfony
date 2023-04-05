@@ -145,56 +145,68 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
                         ";
             // line 58
             echo "                        <div class=\"ml-2 dropdown dropdown-end\">
-                            <label tabindex=\"0\">";
+                            <label tabindex=\"0\" class=\"cursor-pointer\">";
             // line 59
             echo twig_include($this->env, $context, "shared/_avatar.html.twig", ["profile" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 59, $this->source); })()), "user", [], "any", false, false, false, 59), "userProfile", [], "any", false, false, false, 59), "size" => 9]);
             echo "</label>
-                            <ul tabindex=\"0\" class=\"dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52\">
-                                <li><a>Item 1</a></li>
-                                <li><a>Item 2</a></li>
-                            </ul>
-                        </div>
-
-                        <div class=\"ml-2\">
-                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 67
+                            <ul tabindex=\"0\" class=\"w-60 dropdown-content menu p-1 shadow bg-gray-300 bg-opacity-95 dark:bg-gray-700 dark:bg-opacity-90 text-sm rounded-box\">
+                                <li class=\"hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200\"><a href=\"";
+            // line 61
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_settings_profile");
-            echo "\">Profile Settings</a>
-                        </div>
-                        <div class=\"ml-2\">
-                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 70
+            echo "\"><span class=\"material-symbols-outlined\"> settings </span>Cài Đặt Hồ Sơ</a></li>
+                                
+                                <li class=\"hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200\"><a href=\"";
+            // line 63
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_settings_theme");
+            echo "\">
+                                    ";
+            // line 64
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "user", [], "any", false, false, false, 64), "theme", [], "any", false, false, false, 64) == "dark")) {
+                // line 65
+                echo "                                        <span class=\"material-symbols-outlined\"> light_mode </span>Light Mode
+                                    ";
+            } else {
+                // line 67
+                echo "                                        <span class=\"material-symbols-outlined\"> dark_mode </span>Dark Mode
+                                    ";
+            }
+            // line 69
+            echo "                                </a></li>
+                                
+                                <li class=\"hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200\"><a href=\"";
+            // line 71
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
+            echo "\"><span class=\"material-symbols-outlined\"> logout </span>Đăng Xuất</a></li>
+                            </ul>
                         </div>
                     ";
         } else {
-            // line 73
+            // line 75
             echo "                        <div>
                             <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 74
+            // line 76
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Login</a>
                         </div>
                         <div class=\"ml-2\">
                             <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-            // line 77
+            // line 79
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">Register</a>
                         </div>
                     ";
         }
-        // line 80
+        // line 82
         echo "                </div>
             </div>
         </div>
         <div class=\"w-full md:w-2/3 mx-auto\">
         ";
-        // line 84
+        // line 86
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 84, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 84));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 86, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 86));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 85
+            // line 87
             echo "            <div class=\"rounded-md p-2 border-green-300 bg-green-50 border dark:border-green-600 dark:bg-green-700 dark:text-white mb-4\">";
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "</div>
@@ -203,18 +215,18 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 87
+        // line 89
         echo "
         ";
-        // line 88
-        $this->displayBlock('body', $context, $blocks);
         // line 90
+        $this->displayBlock('body', $context, $blocks);
+        // line 92
         echo "        </div>
     </body>
     ";
-        // line 92
-        $this->displayBlock('show', $context, $blocks);
         // line 94
+        $this->displayBlock('show', $context, $blocks);
+        // line 96
         echo "</html>
 ";
         
@@ -310,7 +322,7 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
 
     }
 
-    // line 88
+    // line 90
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -320,7 +332,7 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 89
+        // line 91
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -330,7 +342,7 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
 
     }
 
-    // line 92
+    // line 94
     public function block_show($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -340,7 +352,7 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "show"));
 
-        // line 93
+        // line 95
         echo "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -362,7 +374,7 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
 
     public function getDebugInfo()
     {
-        return array (  344 => 93,  334 => 92,  324 => 89,  314 => 88,  304 => 42,  294 => 41,  281 => 21,  271 => 20,  258 => 18,  248 => 17,  229 => 14,  218 => 94,  216 => 92,  212 => 90,  210 => 88,  207 => 87,  198 => 85,  194 => 84,  188 => 80,  182 => 77,  176 => 74,  173 => 73,  167 => 70,  161 => 67,  150 => 59,  147 => 58,  141 => 54,  138 => 53,  132 => 50,  129 => 49,  126 => 48,  124 => 47,  118 => 43,  115 => 41,  111 => 39,  109 => 38,  102 => 34,  89 => 23,  86 => 20,  83 => 17,  78 => 14,  73 => 11,  69 => 10,  66 => 9,  62 => 7,  57 => 4,  54 => 3,  52 => 2,  49 => 1,);
+        return array (  356 => 95,  346 => 94,  336 => 91,  326 => 90,  316 => 42,  306 => 41,  293 => 21,  283 => 20,  270 => 18,  260 => 17,  241 => 14,  230 => 96,  228 => 94,  224 => 92,  222 => 90,  219 => 89,  210 => 87,  206 => 86,  200 => 82,  194 => 79,  188 => 76,  185 => 75,  178 => 71,  174 => 69,  170 => 67,  166 => 65,  164 => 64,  160 => 63,  155 => 61,  150 => 59,  147 => 58,  141 => 54,  138 => 53,  132 => 50,  129 => 49,  126 => 48,  124 => 47,  118 => 43,  115 => 41,  111 => 39,  109 => 38,  102 => 34,  89 => 23,  86 => 20,  83 => 17,  78 => 14,  73 => 11,  69 => 10,  66 => 9,  62 => 7,  57 => 4,  54 => 3,  52 => 2,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -425,18 +437,20 @@ class __TwigTemplate_1994b88eb54d9194f6b9a3ce24409026 extends Template
 
                         {# dropdown #}
                         <div class=\"ml-2 dropdown dropdown-end\">
-                            <label tabindex=\"0\">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</label>
-                            <ul tabindex=\"0\" class=\"dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52\">
-                                <li><a>Item 1</a></li>
-                                <li><a>Item 2</a></li>
+                            <label tabindex=\"0\" class=\"cursor-pointer\">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</label>
+                            <ul tabindex=\"0\" class=\"w-60 dropdown-content menu p-1 shadow bg-gray-300 bg-opacity-95 dark:bg-gray-700 dark:bg-opacity-90 text-sm rounded-box\">
+                                <li class=\"hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200\"><a href=\"{{ path('app_settings_profile') }}\"><span class=\"material-symbols-outlined\"> settings </span>Cài Đặt Hồ Sơ</a></li>
+                                
+                                <li class=\"hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200\"><a href=\"{{ path('app_settings_theme') }}\">
+                                    {% if app.user.theme == \"dark\" %}
+                                        <span class=\"material-symbols-outlined\"> light_mode </span>Light Mode
+                                    {% else %}
+                                        <span class=\"material-symbols-outlined\"> dark_mode </span>Dark Mode
+                                    {% endif %}
+                                </a></li>
+                                
+                                <li class=\"hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200\"><a href=\"{{ path('app_logout') }}\"><span class=\"material-symbols-outlined\"> logout </span>Đăng Xuất</a></li>
                             </ul>
-                        </div>
-
-                        <div class=\"ml-2\">
-                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_settings_profile') }}\">Profile Settings</a>
-                        </div>
-                        <div class=\"ml-2\">
-                            <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_logout') }}\">Logout</a>
                         </div>
                     {% else %}
                         <div>

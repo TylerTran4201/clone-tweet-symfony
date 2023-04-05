@@ -28,6 +28,7 @@ return [
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/settings/profile' => [[['_route' => 'app_settings_profile', '_controller' => 'App\\Controller\\SettingsProfileController::profile'], null, null, null, false, false, null]],
         '/settings/profile-image' => [[['_route' => 'app_settings_profile_image', '_controller' => 'App\\Controller\\SettingsProfileController::profileImage'], null, null, null, false, false, null]],
+        '/settings/theme' => [[['_route' => 'app_settings_theme', '_controller' => 'App\\Controller\\SettingsProfileController::theme'], null, null, null, false, false, null]],
         '/admin/user_manage' => [[['_route' => 'app_user_manage', '_controller' => 'App\\Controller\\UserManageController::userMange'], null, null, null, false, false, null]],
         '/admin/user_admin_manage' => [[['_route' => 'app_user_admin_manage', '_controller' => 'App\\Controller\\UserManageController::userAdminManage'], null, null, null, false, false, null]],
         '/admin/user_profile_manage' => [[['_route' => 'app_user_profile_manage', '_controller' => 'App\\Controller\\UserManageController::userProfileManage'], null, null, null, false, false, null]],

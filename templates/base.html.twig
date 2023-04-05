@@ -56,18 +56,20 @@
 
                         {# dropdown #}
                         <div class="ml-2 dropdown dropdown-end">
-                            <label tabindex="0">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</label>
-                            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><a>Item 1</a></li>
-                                <li><a>Item 2</a></li>
+                            <label tabindex="0" class="cursor-pointer">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</label>
+                            <ul tabindex="0" class="w-60 dropdown-content menu p-1 shadow bg-gray-300 bg-opacity-95 dark:bg-gray-700 dark:bg-opacity-90 text-sm rounded-box">
+                                <li class="hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200"><a href="{{ path('app_settings_profile') }}"><span class="material-symbols-outlined"> settings </span>Cài Đặt Hồ Sơ</a></li>
+                                
+                                <li class="hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200"><a href="{{ path('app_settings_theme') }}">
+                                    {% if app.user.theme == "dark" %}
+                                        <span class="material-symbols-outlined"> light_mode </span>Light Mode
+                                    {% else %}
+                                        <span class="material-symbols-outlined"> dark_mode </span>Dark Mode
+                                    {% endif %}
+                                </a></li>
+                                
+                                <li class="hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200"><a href="{{ path('app_logout') }}"><span class="material-symbols-outlined"> logout </span>Đăng Xuất</a></li>
                             </ul>
-                        </div>
-
-                        <div class="ml-2">
-                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_settings_profile') }}">Profile Settings</a>
-                        </div>
-                        <div class="ml-2">
-                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_logout') }}">Logout</a>
                         </div>
                     {% else %}
                         <div>

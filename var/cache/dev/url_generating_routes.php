@@ -41,6 +41,7 @@ return [
     'app_verify_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], [], [['text', '/verify/email']], [], [], []],
     'app_settings_profile' => [[], ['_controller' => 'App\\Controller\\SettingsProfileController::profile'], [], [['text', '/settings/profile']], [], [], []],
     'app_settings_profile_image' => [[], ['_controller' => 'App\\Controller\\SettingsProfileController::profileImage'], [], [['text', '/settings/profile-image']], [], [], []],
+    'app_settings_theme' => [[], ['_controller' => 'App\\Controller\\SettingsProfileController::theme'], [], [['text', '/settings/theme']], [], [], []],
     'app_user_manage' => [[], ['_controller' => 'App\\Controller\\UserManageController::userMange'], [], [['text', '/admin/user_manage']], [], [], []],
     'app_user_unlock' => [['id'], ['_controller' => 'App\\Controller\\UserManageController::unlockAccount'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/user_unlock']], [], [], []],
     'app_user_lock' => [['id'], ['_controller' => 'App\\Controller\\UserManageController::lockAccount'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/user_lock']], [], [], []],
