@@ -53,7 +53,6 @@
                         <div class="ml-2">
                             <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_micro_post_add') }}">Add New</a>
                         </div>
-
                         {# dropdown #}
                         <div class="ml-2 dropdown dropdown-end">
                             <label tabindex="0" class="cursor-pointer">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</label>
@@ -73,10 +72,10 @@
                         </div>
                     {% else %}
                         <div>
-                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_login') }}">Login</a>
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_login') }}">Đăng Nhập</a>
                         </div>
                         <div class="ml-2">
-                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_register') }}">Register</a>
+                            <a class="hover:text-indigo-500 hover:underline hover:font-semibold" href="{{ path('app_register') }}">Đăng Ký</a>
                         </div>
                     {% endif %}
                 </div>
