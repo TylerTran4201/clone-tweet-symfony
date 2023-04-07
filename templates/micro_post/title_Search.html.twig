@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tìm Kiếm Title{% endblock %}
+
+{% block bread %}
+Tìm Kiếm Title
+{% endblock %}
+
+{% block body %}
+{{ include('micro_post/_post_tabs.html.twig') }}
+{{ form_start(form) }}
+<div class="flex flex-row items-center">
+    <div class="basis-3/4">
+        {{ form_widget(form.title, {'attr': {'class': 'bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}})}}
+        {{ form_errors(form.title) }}
+    </div>
+    <div class="basis-1/4">
+        <button type="submit"
+                class="m-auto block w-3/4 shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-md border p-2 mt-4 mb-2">Search</button>
+    </div>
+</div>
+{{ form_end(form) }}
+{{ include('micro_post/_post_list.html.twig') }}
+{% endblock %}

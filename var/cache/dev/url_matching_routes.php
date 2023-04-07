@@ -23,6 +23,7 @@ return [
         '/micro-post' => [[['_route' => 'app_micro_post', '_controller' => 'App\\Controller\\MicroPostController::index'], null, null, null, false, false, null]],
         '/micro-post/top-liked' => [[['_route' => 'app_micro_post_topliked', '_controller' => 'App\\Controller\\MicroPostController::topLiked'], null, null, null, false, false, null]],
         '/micro-post/follows' => [[['_route' => 'app_micro_post_follows', '_controller' => 'App\\Controller\\MicroPostController::follows'], null, null, null, false, false, null]],
+        '/micro-post/search' => [[['_route' => 'app_micro_post_search', '_controller' => 'App\\Controller\\MicroPostController::search'], null, null, null, false, false, null]],
         '/admin/post_manage' => [[['_route' => 'app_post_manage', '_controller' => 'App\\Controller\\PostManageController::postManage'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
@@ -76,6 +77,7 @@ return [
                     .'|lock/([^/]++)(*:456)'
                     .'|admin_manage/set_role/([^/]++)(*:494)'
                 .')'
+                .'|/(.+)(*:508)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -99,8 +101,9 @@ return [
         395 => [[['_route' => 'app_profile_followers', '_controller' => 'App\\Controller\\ProfileController::followers'], ['id'], null, null, false, false, null]],
         435 => [[['_route' => 'app_user_unlock', '_controller' => 'App\\Controller\\UserManageController::unlockAccount'], ['id'], null, null, false, true, null]],
         456 => [[['_route' => 'app_user_lock', '_controller' => 'App\\Controller\\UserManageController::lockAccount'], ['id'], null, null, false, true, null]],
-        494 => [
-            [['_route' => 'app_set_role_admin', '_controller' => 'App\\Controller\\UserManageController::setAdminRole'], ['id'], null, null, false, true, null],
+        494 => [[['_route' => 'app_set_role_admin', '_controller' => 'App\\Controller\\UserManageController::setAdminRole'], ['id'], null, null, false, true, null]],
+        508 => [
+            [['_route' => 'not_found', '_controller' => 'App\\Controller\\ErrorController::notFound'], ['any'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

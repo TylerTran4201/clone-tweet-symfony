@@ -103,14 +103,14 @@ class __TwigTemplate_b33a23ec078a5faed985411cde8a87a7 extends Template
       <div class=\"container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center\">
         <!--Left Col-->
         <div class=\"flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left\">
-          <p class=\"uppercase tracking-loose w-full\">What business are you?</p>
+          <p class=\"uppercase tracking-loose w-full\">Bạn cần có một nơi đăng bài viết ?</p>
           <h1 class=\"my-4 text-5xl font-bold leading-tight\">
-            Main Hero Message to sell yourself!
+            Một nơi an toàn để sử dụng như một nhật ký công khai.
           </h1>
           <p class=\"leading-normal text-2xl mb-8\">
-            Sub-hero message, not too long and not too short. Make it just right!
+            Tham gia, vào một trường lành mạnh cho những bài post!
           </p>
-          <a class=\"mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4\"
+          <a class=\"z-10 mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4\"
               href=\"";
         // line 68
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_micro_post");
@@ -312,14 +312,14 @@ class __TwigTemplate_b33a23ec078a5faed985411cde8a87a7 extends Template
       <div class=\"container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center\">
         <!--Left Col-->
         <div class=\"flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left\">
-          <p class=\"uppercase tracking-loose w-full\">What business are you?</p>
+          <p class=\"uppercase tracking-loose w-full\">Bạn cần có một nơi đăng bài viết ?</p>
           <h1 class=\"my-4 text-5xl font-bold leading-tight\">
-            Main Hero Message to sell yourself!
+            Một nơi an toàn để sử dụng như một nhật ký công khai.
           </h1>
           <p class=\"leading-normal text-2xl mb-8\">
-            Sub-hero message, not too long and not too short. Make it just right!
+            Tham gia, vào một trường lành mạnh cho những bài post!
           </p>
-          <a class=\"mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4\"
+          <a class=\"z-10 mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4\"
               href=\"{{ path('app_micro_post') }}\">
             Tham Gia
           </a>

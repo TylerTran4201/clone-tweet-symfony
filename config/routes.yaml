@@ -2,6 +2,12 @@ controllers:
     resource: ../src/Controller/
     type: attribute
 
+# config/routes.yaml
+not_found:
+    path: /{any}
+    controller: App\Controller\ErrorController::notFound
+    requirements:
+        any: .+
 
 # app_index:
 #     path: /

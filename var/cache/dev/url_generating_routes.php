@@ -29,6 +29,7 @@ return [
     'app_micro_post' => [[], ['_controller' => 'App\\Controller\\MicroPostController::index'], [], [['text', '/micro-post']], [], [], []],
     'app_micro_post_topliked' => [[], ['_controller' => 'App\\Controller\\MicroPostController::topLiked'], [], [['text', '/micro-post/top-liked']], [], [], []],
     'app_micro_post_follows' => [[], ['_controller' => 'App\\Controller\\MicroPostController::follows'], [], [['text', '/micro-post/follows']], [], [], []],
+    'app_micro_post_search' => [[], ['_controller' => 'App\\Controller\\MicroPostController::search'], [], [['text', '/micro-post/search']], [], [], []],
     'app_micro_post_show' => [['post'], ['_controller' => 'App\\Controller\\MicroPostController::showOne'], [], [['variable', '/', '[^/]++', 'post', true], ['text', '/micro-post']], [], [], []],
     'app_micro_post_delete' => [['post'], ['_controller' => 'App\\Controller\\MicroPostController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'post', true], ['text', '/micro-post']], [], [], []],
     'app_micro_post_edit' => [['post'], ['_controller' => 'App\\Controller\\MicroPostController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'post', true], ['text', '/micro-post']], [], [], []],
@@ -48,4 +49,5 @@ return [
     'app_user_admin_manage' => [[], ['_controller' => 'App\\Controller\\UserManageController::userAdminManage'], [], [['text', '/admin/user_admin_manage']], [], [], []],
     'app_set_role_admin' => [['id'], ['_controller' => 'App\\Controller\\UserManageController::setAdminRole'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/user_admin_manage/set_role']], [], [], []],
     'app_user_profile_manage' => [[], ['_controller' => 'App\\Controller\\UserManageController::userProfileManage'], [], [['text', '/admin/user_profile_manage']], [], [], []],
+    'not_found' => [['any'], ['_controller' => 'App\\Controller\\ErrorController::notFound'], ['any' => '.+'], [['variable', '/', '.+', 'any', true]], [], [], []],
 ];

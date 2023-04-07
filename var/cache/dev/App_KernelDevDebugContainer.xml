@@ -320,6 +320,9 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\EventListener\ExceptionListener" class="App\EventListener\ExceptionListener" autowire="true" autoconfigure="true">
+      <argument type="service" id="router.default"/>
+    </service>
     <service id="App\Command\CreateUserCommand" class="App\Command\CreateUserCommand" autowire="true" autoconfigure="true">
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
@@ -337,6 +340,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\AdminController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ErrorController" class="App\Controller\ErrorController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\ErrorController"/>
       </call>
     </service>
     <service id="App\Controller\FollowerController" class="App\Controller\FollowerController" public="true" autowire="true" autoconfigure="true">
@@ -427,6 +437,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\TitleSearchType" class="App\Form\TitleSearchType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\UserProfileType" class="App\Form\UserProfileType" autowire="true" autoconfigure="true">
@@ -1006,6 +1019,7 @@
         <argument>App\Form\MicroPostType</argument>
         <argument>App\Form\ProfileImageType</argument>
         <argument>App\Form\RegistrationFormType</argument>
+        <argument>App\Form\TitleSearchType</argument>
         <argument>App\Form\UserProfileType</argument>
         <argument>App\Form\UserType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -2195,7 +2209,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.Vb2fs.o"/>
+      <argument type="service" id=".service_locator.p2ZkIZc"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4554,6 +4568,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ErrorController" class="App\Controller\ErrorController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ErrorController" class="App\Controller\ErrorController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ErrorController" class="App\Controller\ErrorController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FollowerController" class="App\Controller\FollowerController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FollowerController" class="App\Controller\FollowerController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FollowerController" class="App\Controller\FollowerController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4596,6 +4613,8 @@
     <service id=".abstract.instanceof.App\Form\ProfileImageType" class="App\Form\ProfileImageType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TitleSearchType" class="App\Form\TitleSearchType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\TitleSearchType" class="App\Form\TitleSearchType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserProfileType" class="App\Form\UserProfileType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserProfileType" class="App\Form\UserProfileType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
@@ -5052,7 +5071,7 @@
         <argument key="users" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.4zvndl5" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.4FyXx2." class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::statistical" type="service_closure" id=".service_locator.WS.x59_"/>
@@ -5068,6 +5087,7 @@
         <argument key="App\Controller\MicroPostController::edit" type="service_closure" id=".service_locator.aJrNPvK"/>
         <argument key="App\Controller\MicroPostController::follows" type="service_closure" id=".service_locator.cUgw6IB"/>
         <argument key="App\Controller\MicroPostController::index" type="service_closure" id=".service_locator.cUgw6IB"/>
+        <argument key="App\Controller\MicroPostController::search" type="service_closure" id=".service_locator.cUgw6IB"/>
         <argument key="App\Controller\MicroPostController::showOne" type="service_closure" id=".service_locator.J46UgjH"/>
         <argument key="App\Controller\MicroPostController::topLiked" type="service_closure" id=".service_locator.cUgw6IB"/>
         <argument key="App\Controller\PostManageController::postManage" type="service_closure" id=".service_locator.cUgw6IB"/>
@@ -5101,6 +5121,7 @@
         <argument key="App\Controller\MicroPostController:edit" type="service_closure" id=".service_locator.aJrNPvK"/>
         <argument key="App\Controller\MicroPostController:follows" type="service_closure" id=".service_locator.cUgw6IB"/>
         <argument key="App\Controller\MicroPostController:index" type="service_closure" id=".service_locator.cUgw6IB"/>
+        <argument key="App\Controller\MicroPostController:search" type="service_closure" id=".service_locator.cUgw6IB"/>
         <argument key="App\Controller\MicroPostController:showOne" type="service_closure" id=".service_locator.J46UgjH"/>
         <argument key="App\Controller\MicroPostController:topLiked" type="service_closure" id=".service_locator.cUgw6IB"/>
         <argument key="App\Controller\PostManageController:postManage" type="service_closure" id=".service_locator.cUgw6IB"/>
@@ -5190,7 +5211,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.Vb2fs.o" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.p2ZkIZc" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AdminRoleType" type="service_closure" id="App\Form\AdminRoleType"/>
@@ -5198,6 +5219,7 @@
         <argument key="App\Form\MicroPostType" type="service_closure" id="App\Form\MicroPostType"/>
         <argument key="App\Form\ProfileImageType" type="service_closure" id="App\Form\ProfileImageType"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
+        <argument key="App\Form\TitleSearchType" type="service_closure" id="App\Form\TitleSearchType"/>
         <argument key="App\Form\UserProfileType" type="service_closure" id="App\Form\UserProfileType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
         <argument key="FOS\CKEditorBundle\Form\Type\CKEditorType" type="service_closure" id="fos_ck_editor.form.type"/>
@@ -5288,6 +5310,12 @@
     <service id=".service_locator.jIxfAsi.App\Controller\AdminController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\AdminController"/>
       <argument>App\Controller\AdminController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\ErrorController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ErrorController"/>
+      <argument>App\Controller\ErrorController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
@@ -5507,12 +5535,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.4zvndl5"/>
+      <argument type="service" id=".service_locator.4FyXx2."/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.4zvndl5"/>
+      <argument type="service" id=".service_locator.4FyXx2."/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -6291,7 +6319,7 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.4zvndl5"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.4FyXx2."/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -6304,9 +6332,9 @@
     <service id=".service_locator.Xqjp7BL" alias=".service_locator.VVCoPw4"/>
     <service id=".service_locator.riGN6sa" alias=".service_locator.YU8H6ve"/>
     <service id=".service_locator.9ihagKl" alias=".service_locator.QCLB1hM"/>
-    <service id=".service_locator.I6ko.7k" alias=".service_locator.4zvndl5"/>
+    <service id=".service_locator.venwbtI" alias=".service_locator.4FyXx2."/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
-    <service id=".service_locator.SoPoY0J" alias=".service_locator.Vb2fs.o"/>
+    <service id=".service_locator.UvStg1s" alias=".service_locator.p2ZkIZc"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
     <service id=".service_locator._eRAkJb" alias=".service_locator.jIxfAsi"/>
     <service id="validator" alias="debug.validator"/>

@@ -7,6 +7,7 @@ use App\Entity\Comment;
 use App\Entity\MicroPost;
 use App\Form\CommentType;
 use App\Form\MicroPostType;
+use App\Form\TitleSearchType;
 use App\Repository\CommentRepository;
 use App\Repository\MicroPostRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -53,6 +54,39 @@ class MicroPostController extends AbstractController
                 'posts' => $posts->findAllByAuthors(
                     $currentUser->getFollows()
                 ),
+            ]
+        );
+    }
+
+    #[Route('/micro-post/search', name: 'app_micro_post_search')]
+    #[IsGranted('IS_AUTHENTICATED_FULLY')]
+    public function search(Request $request, MicroPostRepository $posts): Response
+    {
+        $form = $this->createForm(
+            TitleSearchType::class,
+            new MicroPost()
+        );
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $post = $form->getData();
+            /** @var String  $txtSeach */
+
+            $txtSeach = $post->getTitle();
+            // Add a flash
+            return $this->render(
+                'micro_post/title_Search.html.twig',
+                [
+                    'posts' => $posts->findAllBySearch($txtSeach),
+                    'form' => $form->createView()
+                ]
+            );
+            // Redirect
+        }
+        return $this->render(
+            'micro_post/title_Search.html.twig',
+            [
+                'posts' => $posts->findAllBySearch(""),
+                'form' => $form->createView()
             ]
         );
     }

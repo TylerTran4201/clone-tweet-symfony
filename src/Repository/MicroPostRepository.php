@@ -80,6 +80,17 @@ class MicroPostRepository extends ServiceEntityRepository
             $author instanceof User ? $author->getId() : $author
         )->getQuery()->getResult();
     }
+    public function findAllBySearch(string $txtSearch){
+        if($txtSearch == "")
+            return null;
+        return $this->findALlQuery(
+            withComments: true,
+            withLikes: true,
+            withProfiles: true
+        )->where('p.title LIKE :searchTerm')
+        ->setParameter('searchTerm','%' .$txtSearch.'%')
+        ->getQuery()->getResult();
+    }
     public function findAllWithMinLikes(int $minLikes): array{
         $idList = $this->findAllQuery(
             withLikes: true,
