@@ -149,7 +149,7 @@ class MicroPostController extends AbstractController
     #[Route('/micro-post/{post}/delete', name: 'app_micro_post_delete')]
     public function delete(MicroPost $post, MicroPostRepository $posts,Request $request): Response
     {
-        if (!$this->isGranted('ROLE_ADMIN_REMOVE')){
+        if (!$this->isGranted('ROLE_ADMIN_REMOVE') || !$this->isGranted('ROLE_EDIT')){ // for admin remove and edit users
             return $this->render('error/403_page.html.twig',[
                 'title' => 'Cần có quyền hạn để xóa bài viết'
             ]);
