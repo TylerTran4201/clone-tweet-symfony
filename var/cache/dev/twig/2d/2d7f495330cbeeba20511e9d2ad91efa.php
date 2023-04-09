@@ -109,19 +109,20 @@ class __TwigTemplate_f8813a11002b4de61f449f090fcc0e2f extends Template
         // line 10
         echo twig_include($this->env, $context, "micro_post/_post_tabs.html.twig");
         echo "
+<div class=\"dark:text-gray-200 font-medium text-2xl\"> Tìm kiếm theo tiêu đề </div>
 ";
-        // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'form_start');
+        // line 12
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_start');
         echo "
 <div class=\"flex flex-row items-center\">
     <div class=\"basis-3/4\">
         ";
-        // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), "title", [], "any", false, false, false, 14), 'widget', ["attr" => ["class" => "bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        // line 15
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "title", [], "any", false, false, false, 15), 'widget', ["attr" => ["class" => "bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
         ";
-        // line 15
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "title", [], "any", false, false, false, 15), 'errors');
+        // line 16
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), "title", [], "any", false, false, false, 16), 'errors');
         echo "
     </div>
     <div class=\"basis-1/4\">
@@ -130,11 +131,11 @@ class __TwigTemplate_f8813a11002b4de61f449f090fcc0e2f extends Template
     </div>
 </div>
 ";
-        // line 22
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_end');
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_end');
         echo "
 ";
-        // line 23
+        // line 24
         echo twig_include($this->env, $context, "micro_post/_post_list.html.twig");
         echo "
 ";
@@ -158,7 +159,7 @@ class __TwigTemplate_f8813a11002b4de61f449f090fcc0e2f extends Template
 
     public function getDebugInfo()
     {
-        return array (  138 => 23,  134 => 22,  124 => 15,  120 => 14,  114 => 11,  110 => 10,  100 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  139 => 24,  135 => 23,  125 => 16,  121 => 15,  115 => 12,  110 => 10,  100 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -173,6 +174,7 @@ Tìm Kiếm Title
 
 {% block body %}
 {{ include('micro_post/_post_tabs.html.twig') }}
+<div class=\"dark:text-gray-200 font-medium text-2xl\"> Tìm kiếm theo tiêu đề </div>
 {{ form_start(form) }}
 <div class=\"flex flex-row items-center\">
     <div class=\"basis-3/4\">
