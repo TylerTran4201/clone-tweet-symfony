@@ -118,7 +118,7 @@ class __TwigTemplate_f8813a11002b4de61f449f090fcc0e2f extends Template
     <div class=\"basis-3/4\">
         ";
         // line 15
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "title", [], "any", false, false, false, 15), 'widget', ["attr" => ["class" => "bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "title", [], "any", false, false, false, 15), 'widget', ["attr" => ["placeholder" => "Search", "class" => "bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"]]);
         echo "
         ";
         // line 16
@@ -178,7 +178,7 @@ Tìm Kiếm Title
 {{ form_start(form) }}
 <div class=\"flex flex-row items-center\">
     <div class=\"basis-3/4\">
-        {{ form_widget(form.title, {'attr': {'class': 'bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}})}}
+        {{ form_widget(form.title, {'attr': {'placeholder':'Search','class': 'bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}})}}
         {{ form_errors(form.title) }}
     </div>
     <div class=\"basis-1/4\">
