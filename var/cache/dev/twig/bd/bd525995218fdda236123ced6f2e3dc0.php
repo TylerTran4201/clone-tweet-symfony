@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* settings_profile/_profile_form.html.twig */
+/* /settings_profile/_profile_form.html.twig */
 class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
 {
     private $source;
@@ -34,10 +34,10 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "settings_profile/_profile_form.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/settings_profile/_profile_form.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "settings_profile/_profile_form.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/settings_profile/_profile_form.html.twig"));
 
         // line 1
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), "name", [], "any", false, false, false, 1), 'label', ["label_attr" => ["class" => "text-sm font-medium leading-none text-gray-800 dark:text-gray-200"], "label" => "Tên của bạn"]);
@@ -122,7 +122,7 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
 
     public function getTemplateName()
     {
-        return "settings_profile/_profile_form.html.twig";
+        return "/settings_profile/_profile_form.html.twig";
     }
 
     public function isTraitable()
@@ -168,6 +168,6 @@ class __TwigTemplate_540d62a1d3f3e5b6fdcbd049429d19d6 extends Template
 </div>
 {{ form_label(form.dateOfBirth, 'Ngày sinh', {'label_attr': {'class': 'text-sm font-medium leading-none text-gray-800 dark:text-gray-200'}}) }}
 {{ form_widget(form.dateOfBirth, {'attr': {'class': 'bg-gray-200 bg-opacity-40 dark:text-gray-200 dark:bg-gray-500 dark:bg-opacity-40 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2'}}) }}
-", "settings_profile/_profile_form.html.twig", "E:\\clone-tweet\\templates\\settings_profile\\_profile_form.html.twig");
+", "/settings_profile/_profile_form.html.twig", "E:\\clone-tweet\\templates\\settings_profile\\_profile_form.html.twig");
     }
 }

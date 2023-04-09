@@ -24,10 +24,15 @@ class __TwigTemplate_4813da6c84f3aae4938fe498013fac61 extends Template
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
+            'show' => [$this, 'block_show'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "InitDarkMode.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -39,15 +44,33 @@ class __TwigTemplate_4813da6c84f3aae4938fe498013fac61 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "registration/register.html.twig"));
 
-        // line 1
+        $this->parent = $this->loadTemplate("InitDarkMode.html.twig", "registration/register.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 2
+    public function block_show($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "show"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "show"));
+
+        // line 3
         echo "<html>
- <head>
+<head>
         <meta charset=\"UTF-8\">
         <title>Đăng Ký</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
-        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0\" />
-        <script src=\"https://cdn.tailwindcss.com\"></script>
-    </head>
+
+</head>
 <body style=\"background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);\">
 ";
         // line 10
@@ -176,12 +199,13 @@ class __TwigTemplate_4813da6c84f3aae4938fe498013fac61 extends Template
 </div>
 </body>
 </html>
+
 ";
         
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
         
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
     }
 
@@ -197,19 +221,19 @@ class __TwigTemplate_4813da6c84f3aae4938fe498013fac61 extends Template
 
     public function getDebugInfo()
     {
-        return array (  174 => 75,  167 => 71,  157 => 64,  139 => 49,  135 => 48,  128 => 44,  124 => 43,  120 => 42,  114 => 39,  110 => 38,  106 => 37,  99 => 33,  95 => 32,  91 => 31,  73 => 16,  70 => 15,  61 => 12,  58 => 11,  54 => 10,  43 => 1,);
+        return array (  197 => 75,  190 => 71,  180 => 64,  162 => 49,  158 => 48,  151 => 44,  147 => 43,  143 => 42,  137 => 39,  133 => 38,  129 => 37,  122 => 33,  118 => 32,  114 => 31,  96 => 16,  93 => 15,  84 => 12,  81 => 11,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<html>
- <head>
+        return new Source("{% extends 'InitDarkMode.html.twig' %}
+{% block show %}
+<html>
+<head>
         <meta charset=\"UTF-8\">
         <title>Đăng Ký</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
-        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0\" />
-        <script src=\"https://cdn.tailwindcss.com\"></script>
-    </head>
+
+</head>
 <body style=\"background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);\">
 {% for flash_error in app.flashes('verify_email_error') %}
     <div class=\"rounded-md p-2 border-red-300 bg-red-50 border dark:border-red-600 dark:bg-red-700 dark:text-white mb-4\" role=\"alert\">
@@ -280,6 +304,7 @@ class __TwigTemplate_4813da6c84f3aae4938fe498013fac61 extends Template
 </div>
 </body>
 </html>
-", "registration/register.html.twig", "E:\\clone-tweet\\templates\\registration\\register.html.twig");
+
+{% endblock %}", "registration/register.html.twig", "E:\\clone-tweet\\templates\\registration\\register.html.twig");
     }
 }
