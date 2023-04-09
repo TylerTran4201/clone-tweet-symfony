@@ -142,7 +142,7 @@ class __TwigTemplate_2e85fbe41b62bf1daae888d0918e644a extends Template
         </div>
         <div class=\"grid justify-items-center\">
             <button type=\"submit\"
-                    class=\"block shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-500 text-white rounded-md border p-2 mt-4 mb-2\">Add Comment!</button>
+                    class=\"block shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-500 text-white rounded-md border p-2 mt-4 mb-2\">Thêm Bình Luận!</button>
         </div>
     ";
         // line 27
@@ -199,7 +199,7 @@ class __TwigTemplate_2e85fbe41b62bf1daae888d0918e644a extends Template
         </div>
         <div class=\"grid justify-items-center\">
             <button type=\"submit\"
-                    class=\"block shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-500 text-white rounded-md border p-2 mt-4 mb-2\">Add Comment!</button>
+                    class=\"block shadow-sm border-transparent bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-500 text-white rounded-md border p-2 mt-4 mb-2\">Thêm Bình Luận!</button>
         </div>
     {{ form_end(form) }}
     </div>
