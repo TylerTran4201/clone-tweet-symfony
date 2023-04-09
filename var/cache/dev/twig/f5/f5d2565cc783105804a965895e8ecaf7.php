@@ -86,7 +86,7 @@ class __TwigTemplate_96c929c3493e82649358e2f1ebb76746 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "bread"));
 
         // line 6
-        echo "-> Cài Đặt Thông Tin Cá Nhân
+        echo "Cài Đặt Thông Tin Cá Nhân
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -160,7 +160,7 @@ class __TwigTemplate_96c929c3493e82649358e2f1ebb76746 extends Template
 {% block title %}Cài Đặt Thông Tin Cá Nhân{% endblock %}
 
 {% block bread %}
--> Cài Đặt Thông Tin Cá Nhân
+Cài Đặt Thông Tin Cá Nhân
 {% endblock %}
 
 {% block body %}

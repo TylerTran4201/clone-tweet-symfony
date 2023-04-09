@@ -57,6 +57,7 @@
                         <div class="ml-2 dropdown dropdown-end">
                             <label tabindex="0" class="cursor-pointer">{{ include('shared/_avatar.html.twig',{profile: app.user.userProfile, size: 9})}}</label>
                             <ul tabindex="0" class="w-60 dropdown-content menu p-1 shadow bg-gray-300 bg-opacity-95 dark:bg-gray-700 dark:bg-opacity-90 text-sm rounded-box">
+                                <li class="hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200"><a href="{{ path('app_profile', {id: app.user.id}) }}"><span class="material-symbols-outlined"> person </span>Trang Cá Nhân</a></li>
                                 <li class="hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200"><a href="{{ path('app_settings_profile') }}"><span class="material-symbols-outlined"> settings </span>Cài Đặt Hồ Sơ</a></li>
                                 
                                 <li class="hover:bg-gray-700 hover:bg-opacity-75 hover:text-gray-200"><a href="{{ path('app_settings_theme') }}">
