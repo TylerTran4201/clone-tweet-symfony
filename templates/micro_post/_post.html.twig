@@ -13,7 +13,7 @@
 
                 <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40">
                 <!-- The button to open modal -->
-                {% if app.user.isAdmin == 1 %}
+                {% if app.user.isAdmin == 1 or  is_granted('ROLE_EDIT') == false %}
                 <li class="hover:bg-gray-700 hover:bg-opacity-75">
                     <label for="my-modal" class="text-red-500">Xóa Bài</label>
                 </li>

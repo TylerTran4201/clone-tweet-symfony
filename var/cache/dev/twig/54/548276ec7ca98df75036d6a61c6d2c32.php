@@ -66,7 +66,7 @@ class __TwigTemplate_04c9555afe102a7215ad7416ff9a1c3e extends Template
                 <!-- The button to open modal -->
                 ";
             // line 16
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "isAdmin", [], "any", false, false, false, 16) == 1)) {
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "isAdmin", [], "any", false, false, false, 16) == 1) || ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_EDIT") == false))) {
                 // line 17
                 echo "                <li class=\"hover:bg-gray-700 hover:bg-opacity-75\">
                     <label for=\"my-modal\" class=\"text-red-500\">Xóa Bài</label>
@@ -207,7 +207,7 @@ class __TwigTemplate_04c9555afe102a7215ad7416ff9a1c3e extends Template
 
                 <ul tabindex=\"0\" class=\"dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40\">
                 <!-- The button to open modal -->
-                {% if app.user.isAdmin == 1 %}
+                {% if app.user.isAdmin == 1 or  is_granted('ROLE_EDIT') == false %}
                 <li class=\"hover:bg-gray-700 hover:bg-opacity-75\">
                     <label for=\"my-modal\" class=\"text-red-500\">Xóa Bài</label>
                 </li>
