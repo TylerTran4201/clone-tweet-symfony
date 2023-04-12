@@ -40,9 +40,9 @@ class __TwigTemplate_04c9555afe102a7215ad7416ff9a1c3e extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "micro_Post/_post.html.twig"));
 
         // line 1
-        echo "<div class=\"bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 w-4/5 shadow-2xl rounded mb-4 p-7\">
+        echo "<div class=\"bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 lg:w-4/5 sm:w-full shadow-2xl rounded mb-4 p-7\">
     <div class=\"text-2xl flex justify-between\">
-        <div>
+        <div class=\"max-sm:text-xl max-sm:font-semibold\">
             <a href=\"";
         // line 4
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_micro_post_show", ["post" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 4, $this->source); })()), "id", [], "any", false, false, false, 4)]), "html", null, true);
@@ -58,11 +58,11 @@ class __TwigTemplate_04c9555afe102a7215ad7416ff9a1c3e extends Template
         if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8) != null)) {
             // line 9
             echo "            <div class=\"dropdown\">
-            <label tabindex=\"0\" class=\"m-1 w-10 rounded hover:bg-gray-800 hover:bg-opacity-50 flex items-center\">
-               <span class=\"material-symbols-outlined cursor-pointer text-4xl\"> more_horiz </span>
+            <label tabindex=\"0\" class=\"m-1 w-10 rounded hover:bg-gray-800 hover:bg-opacity-50 flex items-center max-sm:hover:bg-transparent\">
+               <span class=\"material-symbols-outlined cursor-pointer text-4xl max-sm:text-2xl max-sm:font-semibold\"> more_horiz </span>
             </label>
 
-                <ul tabindex=\"0\" class=\"dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40\">
+            <ul tabindex=\"0\" class=\"dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40 max-sm:w-28 max-sm:text-sm max-sm:font-medium\">
                 <!-- The button to open modal -->
                 ";
             // line 16
@@ -104,7 +104,7 @@ class __TwigTemplate_04c9555afe102a7215ad7416ff9a1c3e extends Template
 
         </div>
     </div>
-    <div class=\"text-xl dark:text-gray-200 border p-2 border-gray-600 rounded-md\">
+    <div class=\"text-xl dark:text-gray-200 border p-2 border-gray-600 rounded-md max-sm:text-sm max-sm:font-normal\">
         ";
         // line 44
         echo twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 44, $this->source); })()), "text", [], "any", false, false, false, 44);
@@ -192,20 +192,20 @@ class __TwigTemplate_04c9555afe102a7215ad7416ff9a1c3e extends Template
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 w-4/5 shadow-2xl rounded mb-4 p-7\">
+        return new Source("<div class=\"bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 lg:w-4/5 sm:w-full shadow-2xl rounded mb-4 p-7\">
     <div class=\"text-2xl flex justify-between\">
-        <div>
+        <div class=\"max-sm:text-xl max-sm:font-semibold\">
             <a href=\"{{path('app_micro_post_show',{post: post.id})}}\">
             {{ post.title }}</a>
         </div>
         <div>
         {% if app.user != null %}
             <div class=\"dropdown\">
-            <label tabindex=\"0\" class=\"m-1 w-10 rounded hover:bg-gray-800 hover:bg-opacity-50 flex items-center\">
-               <span class=\"material-symbols-outlined cursor-pointer text-4xl\"> more_horiz </span>
+            <label tabindex=\"0\" class=\"m-1 w-10 rounded hover:bg-gray-800 hover:bg-opacity-50 flex items-center max-sm:hover:bg-transparent\">
+               <span class=\"material-symbols-outlined cursor-pointer text-4xl max-sm:text-2xl max-sm:font-semibold\"> more_horiz </span>
             </label>
 
-                <ul tabindex=\"0\" class=\"dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40\">
+            <ul tabindex=\"0\" class=\"dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40 max-sm:w-28 max-sm:text-sm max-sm:font-medium\">
                 <!-- The button to open modal -->
                 {% if app.user.isAdmin == 1 or  is_granted('ROLE_EDIT') == false %}
                 <li class=\"hover:bg-gray-700 hover:bg-opacity-75\">
@@ -234,7 +234,7 @@ class __TwigTemplate_04c9555afe102a7215ad7416ff9a1c3e extends Template
 
         </div>
     </div>
-    <div class=\"text-xl dark:text-gray-200 border p-2 border-gray-600 rounded-md\">
+    <div class=\"text-xl dark:text-gray-200 border p-2 border-gray-600 rounded-md max-sm:text-sm max-sm:font-normal\">
         {{post.text | raw}}
     </div>
     <div class=\"text-gray-500 dark:text-gray-200\">

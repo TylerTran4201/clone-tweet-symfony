@@ -106,36 +106,38 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
                     <span class=\"material-symbols-outlined text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600\"
                     >compost</span>
                 </a>
-                ";
-        // line 40
-        if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "request", [], "any", false, false, false, 40), "attributes", [], "any", false, false, false, 40), "get", [0 => "_route"], "method", false, false, false, 40) != "app_admin") && (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "request", [], "any", false, false, false, 40), "attributes", [], "any", false, false, false, 40), "get", [0 => "_route"], "method", false, false, false, 40) != "app_statistical_manage"))) {
-            // line 41
-            echo "                    <span class=\"material-symbols-outlined\"> arrow_forward </span>
-                ";
+                <div class=\"max-sm:hidden flex items-center\">
+                    ";
+        // line 41
+        if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "request", [], "any", false, false, false, 41), "attributes", [], "any", false, false, false, 41), "get", [0 => "_route"], "method", false, false, false, 41) != "app_admin") && (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "request", [], "any", false, false, false, 41), "attributes", [], "any", false, false, false, 41), "get", [0 => "_route"], "method", false, false, false, 41) != "app_statistical_manage"))) {
+            // line 42
+            echo "                        <span class=\"material-symbols-outlined\"> arrow_forward </span>
+                    ";
         }
-        // line 43
-        echo "                ";
+        // line 44
+        echo "                    ";
         $this->displayBlock('bread', $context, $blocks);
-        // line 45
-        echo "            </div>
+        // line 46
+        echo "                </div>
+            </div>
 
             <div class=\"text-right\">
-                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex\">
+                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex max-sm:text-xs max-sm:font-medium\">
                     <div>
                         <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-        // line 50
+        // line 52
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_settings_profile");
         echo "\">Profile Setting</a>
                     </div>
                     <div class=\"ml-2\">
                         <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-        // line 53
+        // line 55
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_micro_post");
         echo "\">Diễn Đàn</a>
                     </div>
                     <div class=\"ml-2\">
                         <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"";
-        // line 56
+        // line 58
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">Logout</a>
                     </div>
@@ -145,11 +147,11 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
 
         <div class=\"w-full md:w-2/3 mx-auto\">
         ";
-        // line 63
+        // line 65
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 63));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 65));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 64
+            // line 66
             echo "            <div class=\"rounded-md p-2 border-green-300 bg-green-50 border dark:border-green-600 dark:bg-green-700 dark:text-white mb-4\">";
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "</div>
@@ -158,10 +160,10 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 68
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 69
+        // line 71
         echo "        </div>   
     </body>
 </html>";
@@ -238,7 +240,7 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
 
     }
 
-    // line 43
+    // line 44
     public function block_bread($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -248,8 +250,8 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "bread"));
 
-        // line 44
-        echo "                ";
+        // line 45
+        echo "                    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -258,7 +260,7 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
 
     }
 
-    // line 66
+    // line 68
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -268,7 +270,7 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 67
+        // line 69
         echo "            ";
         echo twig_include($this->env, $context, "admin/_manage_tabs.html.twig");
         echo "
@@ -293,7 +295,7 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
 
     public function getDebugInfo()
     {
-        return array (  272 => 67,  262 => 66,  252 => 44,  242 => 43,  229 => 23,  219 => 22,  206 => 19,  196 => 18,  177 => 14,  165 => 69,  162 => 66,  153 => 64,  149 => 63,  139 => 56,  133 => 53,  127 => 50,  120 => 45,  117 => 43,  113 => 41,  111 => 40,  104 => 36,  91 => 25,  89 => 22,  86 => 21,  83 => 18,  77 => 14,  72 => 11,  68 => 10,  65 => 9,  61 => 7,  56 => 4,  53 => 3,  51 => 2,  48 => 1,);
+        return array (  274 => 69,  264 => 68,  254 => 45,  244 => 44,  231 => 23,  221 => 22,  208 => 19,  198 => 18,  179 => 14,  167 => 71,  164 => 68,  155 => 66,  151 => 65,  141 => 58,  135 => 55,  129 => 52,  121 => 46,  118 => 44,  114 => 42,  112 => 41,  104 => 36,  91 => 25,  89 => 22,  86 => 21,  83 => 18,  77 => 14,  72 => 11,  68 => 10,  65 => 9,  61 => 7,  56 => 4,  53 => 3,  51 => 2,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -337,15 +339,17 @@ class __TwigTemplate_2fa91ba62af4511b6babd2ec17f91534 extends Template
                     <span class=\"material-symbols-outlined text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600\"
                     >compost</span>
                 </a>
-                {% if app.request.attributes.get('_route') != 'app_admin' and app.request.attributes.get('_route') != 'app_statistical_manage' %}
-                    <span class=\"material-symbols-outlined\"> arrow_forward </span>
-                {% endif %}
-                {% block bread %}
-                {% endblock %}
+                <div class=\"max-sm:hidden flex items-center\">
+                    {% if app.request.attributes.get('_route') != 'app_admin' and app.request.attributes.get('_route') != 'app_statistical_manage' %}
+                        <span class=\"material-symbols-outlined\"> arrow_forward </span>
+                    {% endif %}
+                    {% block bread %}
+                    {% endblock %}
+                </div>
             </div>
 
             <div class=\"text-right\">
-                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex\">
+                <div class=\"text-sm text-gray-500 dark:text-gray-400 flex max-sm:text-xs max-sm:font-medium\">
                     <div>
                         <a class=\"hover:text-indigo-500 hover:underline hover:font-semibold\" href=\"{{ path('app_settings_profile') }}\">Profile Setting</a>
                     </div>

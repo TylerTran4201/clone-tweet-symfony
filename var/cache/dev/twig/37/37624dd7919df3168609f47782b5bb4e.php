@@ -41,7 +41,7 @@ class __TwigTemplate_73ed9eeb319e6d1d8a6f39bc24694fa1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "shared/_tabs.html.twig"));
 
         // line 1
-        echo "<div class=\"bg-white shadow-2xl rounded p-2 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 flex border-b border-gray-300 dark:border-gray-600 w-full mb-8 mt-8\">
+        echo "<div class=\"bg-white shadow-2xl rounded p-2 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 flex border-b border-gray-300 dark:border-gray-600 w-full mb-8 mt-8 max-sm:text-sm max-sm:font-medium\">
     ";
         // line 2
         $this->displayBlock('tabs', $context, $blocks);
@@ -88,7 +88,7 @@ class __TwigTemplate_73ed9eeb319e6d1d8a6f39bc24694fa1 extends Template
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"bg-white shadow-2xl rounded p-2 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 flex border-b border-gray-300 dark:border-gray-600 w-full mb-8 mt-8\">
+        return new Source("<div class=\"bg-white shadow-2xl rounded p-2 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 flex border-b border-gray-300 dark:border-gray-600 w-full mb-8 mt-8 max-sm:text-sm max-sm:font-medium\">
     {% block tabs %}
         
     {% endblock %}

@@ -1,17 +1,17 @@
-<div class="bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 w-4/5 shadow-2xl rounded mb-4 p-7">
+<div class="bg-gray-200 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 lg:w-4/5 sm:w-full shadow-2xl rounded mb-4 p-7">
     <div class="text-2xl flex justify-between">
-        <div>
+        <div class="max-sm:text-xl max-sm:font-semibold">
             <a href="{{path('app_micro_post_show',{post: post.id})}}">
             {{ post.title }}</a>
         </div>
         <div>
         {% if app.user != null %}
             <div class="dropdown">
-            <label tabindex="0" class="m-1 w-10 rounded hover:bg-gray-800 hover:bg-opacity-50 flex items-center">
-               <span class="material-symbols-outlined cursor-pointer text-4xl"> more_horiz </span>
+            <label tabindex="0" class="m-1 w-10 rounded hover:bg-gray-800 hover:bg-opacity-50 flex items-center max-sm:hover:bg-transparent">
+               <span class="material-symbols-outlined cursor-pointer text-4xl max-sm:text-2xl max-sm:font-semibold"> more_horiz </span>
             </label>
 
-                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40">
+            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-gray-300 bg-opacity-75 dark:bg-gray-700 dark:bg-opacity-75 text-sm rounded-box w-40 max-sm:w-28 max-sm:text-sm max-sm:font-medium">
                 <!-- The button to open modal -->
                 {% if app.user.isAdmin == 1 or  is_granted('ROLE_EDIT') == false %}
                 <li class="hover:bg-gray-700 hover:bg-opacity-75">
@@ -40,7 +40,7 @@
 
         </div>
     </div>
-    <div class="text-xl dark:text-gray-200 border p-2 border-gray-600 rounded-md">
+    <div class="text-xl dark:text-gray-200 border p-2 border-gray-600 rounded-md max-sm:text-sm max-sm:font-normal">
         {{post.text | raw}}
     </div>
     <div class="text-gray-500 dark:text-gray-200">
